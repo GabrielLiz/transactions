@@ -33,7 +33,7 @@ En el fichero feature de cucumber los escenrarios (D) y (E) que realizan los tes
 
 ContentType Applicaton/JSON
 
-- localhost:8080/api/transaction/
+- localhost:8080/transaction/
 
 Example request:
 ```
@@ -46,16 +46,16 @@ Example request:
       "description": "string"
  }
  ```
-- localhost:8080/api/searchTrByIban/
+- localhost:8080/searchTrByIban/
 
 Example request:
 ```
 {
   "iban": "ES9820385778983000760236",
-  "sort": 1
+  "sortByAmount": "ASC"
 }
 ```
-- localhost:8080/api/transactionStatus/
+- localhost:8080/transactionStatus/
 
 Example request:
 ```
