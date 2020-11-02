@@ -10,7 +10,7 @@ info:
     name: "Apache 2.0"
     url: "http://www.apache.org/licenses/LICENSE-2.0.html"
 host: "localhost:8080"
-basePath: "/"
+basePath: "/api"
 schemes:
   - "https"
   - "http"
@@ -34,7 +34,7 @@ paths:
       responses:
         "200":
           description: "Invalid input"
-  /searchTransactions:
+  /searchTrByIban:
     post:
       summary: "search transactions"
       description: ""
@@ -143,10 +143,10 @@ definitions:
         description: IBAN
         type: string
         example: ES9820385778983000760236
-      sort:
+      sortByAmount:
         description: Sort by amount (ascending/descending)
-        type: integer
-        example: 1
+        type: string
+        example: ASC/DESC
 
 
 externalDocs:

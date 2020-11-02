@@ -1,6 +1,7 @@
 package io.lizbank.transactionapi.transactionService.impl;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.data.domain.Sort;
 import org.springframework.stereotype.Service;
 
 import java.math.BigDecimal;
@@ -26,9 +27,6 @@ public class TransactionServiceImpl {
         repository.save(transactionValidation(tr));
     }
 
-    public List<Transaction> findAllByIban(String iban) {
-        return TransactionMapper.getInstance().transactionsToOperations(repository.findByIbanOrderByAmountAsc(iban));
-    }
 
     public TransactionStatusResponse findStatus(TransactionStatus status) {
         TransactionEntity transaction = repository.findByReferenceIs(status.getReference());
@@ -42,8 +40,13 @@ public class TransactionServiceImpl {
         return buildResponseStatus(status.getChannel(), transaction);
     }
 
+    public List<Transaction> findAllByIban(String iban, String sortingDirection) {
+        Sort sort = sortingDirection.equals(Constants.ASC) ? Sort.by("amount").ascending(): Sort.by("amount").descending();
+        return TransactionMapper.getInstance().transactionsToOperations(repository.findByIban(iban, sort));
+    }
+
     private TransactionStatusResponse buildResponseStatus(String channel, TransactionEntity entity) {
-        TransactionStatusResponse status = null;
+        TransactionStatusResponse status;
         if (channel.equals(Constants.ATM) || channel.equals(Constants.CLIENT)) {
             status = new TransactionStatusResponse();
             status.setReference(entity.getReference());
@@ -55,7 +58,7 @@ public class TransactionServiceImpl {
             status.setAmount(new BigDecimal(entity.getAmount()));
             status.setFee(new BigDecimal(entity.getFee()));
             status.setStatus(getStatus(entity.getTransactionDate(), channel));
-        }else{
+        } else {
             status = new TransactionStatusResponse();
             status.setReference(entity.getReference());
             status.setAmount(new BigDecimal(entity.getAmount() - entity.getFee()));
@@ -76,7 +79,8 @@ public class TransactionServiceImpl {
                 } else {
                     return Constants.PENDING;
                 }
-            default: return null;
+            default:
+                return null;
         }
     }
 

@@ -25,5 +25,10 @@ public final class Constants {
     public static final String ATM = "ATM";
     public static final String INTERNAL = "INTERNAL";
 
+    /**
+     * SORT
+     * **/
+    public static final String ASC = "ASC";
+    public static final String DESC = "DESC";
 
 }

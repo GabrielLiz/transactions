@@ -109,6 +109,7 @@ public class TransactionsSteps {
     @When("I check the status from PENDING channel")
     public void iCheckTheStatusFromPENDINGChannel() {
 
+
     }
 
     @And("the transaction date is greater than today")

@@ -19,14 +19,14 @@ Feature: Validation the transactions manangmen of the customer
     And the amount
     And the fee
 
-   Scenario: (D) Today ATM or CLIENT 31/10
+   Scenario: (D) Today ATM or CLIENT 03/11
     Given A transaction that is stored in our system with the  reference is 9764567 and "ATM"
     When I check the status from CLIENT or ATM channel
     And the transaction date is equals to today
     Then The system returns the status 'PENDING'
     And the amount substracting the fee
 
-   Scenario: (E) Today INTERNAL 31/10
+   Scenario: (E) Today INTERNAL 03/11
     Given A transaction that is stored in our system with the  reference is 9764567 and "INTERNAL"
     When I check the status from PENDING channel
     And the transaction date is equals to today
