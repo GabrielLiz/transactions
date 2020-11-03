@@ -10,9 +10,9 @@ Or by console:
 
 ### Notes
 
-Usa HSQLDB para levantar una BDDD en memoria cada vez que corre, ejecutando un script `scheme-all.sql` que inserta transacciones dummys para probar los escenarios descritos.
+Usa HSQLDB para levantar una BBDD en memoria cada vez que corre, ejecutando el script `scheme-all.sql` que inserta transacciones dummys para probar los escenarios descritos.
 
-En el fichero feature de cucumber los escenrarios (D) y (E) que realizan los test para el dia de hoy la fecha de `transaction_date` puesta es **03/11/2020** por si no se ejecuta en dicha fecha, en cualquier caso solo seria modificar el insert en el fichero `scheme-all.sql` y volver a ejecutar.
+En el fichero feature de cucumber los escenarios (D) y (E) que realizan los test para el dia de hoy la fecha de `transaction_date` puesta es **03/11/2020** por si no se ejecuta en dicha fecha, en cualquier caso solo seria modificar el insert en el fichero `scheme-all.sql` y volver a ejecutar.
 
 
 <br />
@@ -31,9 +31,11 @@ En el fichero feature de cucumber los escenrarios (D) y (E) que realizan los tes
 
 ### 📕 EndPoints 
 
-ContentType Applicaton/JSON
+ContentType: Applicaton/JSON
 
-- localhost:8080/transaction/
+RequestType: POST
+
+- **localhost:8080/transaction/**
 
 Example request:
 ```
@@ -46,7 +48,7 @@ Example request:
       "description": "string"
  }
  ```
-- localhost:8080/searchTrByIban/
+- **localhost:8080/searchTrByIban/**
 
 Example request:
 ```
@@ -55,7 +57,7 @@ Example request:
   "sortByAmount": "ASC"
 }
 ```
-- localhost:8080/transactionStatus/
+- **localhost:8080/transactionStatus/**
 
 Example request:
 ```
