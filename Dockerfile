@@ -8,4 +8,4 @@ ARG JAR_FILE
 
 COPY ${JAR_FILE} transaction-api-0.0.2-SNAPSHOT.jar
 
-ENTRYPOINT ["java","-jar","/transaction-api-0.0.2-SNAPSHOT.jar"]
+ENTRYPOINT ["java","-jar","transaction-api-0.0.2-SNAPSHOT.jar"]
