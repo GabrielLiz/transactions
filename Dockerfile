@@ -1,9 +1,11 @@
-FROM openjdk:7
+FROM openjdk:8-jdk-alpine
 
 EXPOSE 8080
 
-RUN mkdir -p /target/
+VOLUME /tmp
 
-ADD target/transaction-api-0.0.1-SNAPSHOT.jar transaction-api-0.0.1-SNAPSHOT.jar
+ARG JAR_FILE
 
-ENTRYPOINT [ "java", "-jar", "transaction-api-0.0.1-SNAPSHOT.jar" ]
+COPY ${JAR_FILE} transaction-api-0.0.2-SNAPSHOT.jar
+
+ENTRYPOINT ["java","-jar","/transaction-api-0.0.2-SNAPSHOT.jar"]
