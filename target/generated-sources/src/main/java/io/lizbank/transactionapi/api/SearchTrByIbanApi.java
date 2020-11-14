@@ -24,7 +24,7 @@ import javax.validation.Valid;
 import javax.validation.constraints.*;
 import java.util.List;
 import java.util.Map;
-@javax.annotation.Generated(value = "io.swagger.codegen.v3.generators.java.SpringCodegen", date = "2020-11-14T16:51:04.795362+01:00[Europe/Madrid]")
+@javax.annotation.Generated(value = "io.swagger.codegen.v3.generators.java.SpringCodegen", date = "2020-11-14T17:29:58.631+01:00[Europe/Madrid]")
 @Api(value = "searchTrByIban", description = "the searchTrByIban API")
 public interface SearchTrByIbanApi {
 

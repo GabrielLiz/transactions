@@ -5,12 +5,12 @@ import io.lizbank.transactionapi.models.Transaction;
 import java.math.BigDecimal;
 import java.util.ArrayList;
 import java.util.List;
-import javax.annotation.processing.Generated;
+import javax.annotation.Generated;
 
 @Generated(
     value = "org.mapstruct.ap.MappingProcessor",
-    date = "2020-11-14T16:51:12+0100",
-    comments = "version: 1.3.1.Final, compiler: javac, environment: Java 11.0.9.1 (Ubuntu)"
+    date = "2020-11-14T17:30:04+0100",
+    comments = "version: 1.3.1.Final, compiler: javac, environment: Java 1.8.0_275 (Private Build)"
 )
 public class TransactionMapperImpl implements TransactionMapper {
 

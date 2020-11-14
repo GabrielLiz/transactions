@@ -16,7 +16,7 @@ import javax.validation.constraints.*;
  * FindTransactionResponse
  */
 @Validated
-@javax.annotation.Generated(value = "io.swagger.codegen.v3.generators.java.SpringCodegen", date = "2020-11-14T16:51:04.795362+01:00[Europe/Madrid]")
+@javax.annotation.Generated(value = "io.swagger.codegen.v3.generators.java.SpringCodegen", date = "2020-11-14T17:29:58.631+01:00[Europe/Madrid]")
 public class FindTransactionResponse   {
   @JsonProperty("operations")
   @Valid
