@@ -1,0 +1,17 @@
+io/lizbank/transactionapi/api/TransactionStatusApi.class
+io/lizbank/transactionapi/entities/TransactionEntity.class
+io/lizbank/transactionapi/models/TransactionStatus.class
+io/lizbank/transactionapi/models/Filters.class
+io/lizbank/transactionapi/transactionService/impl/TransactionServiceImpl.class
+io/lizbank/transactionapi/api/SearchTrByIbanApi.class
+io/lizbank/transactionapi/TransactionApiApplication.class
+io/lizbank/transactionapi/models/TransactionStatusResponse.class
+io/lizbank/transactionapi/models/Transaction.class
+io/lizbank/transactionapi/controller/TransactionController.class
+io/lizbank/transactionapi/repository/TransactionRepository.class
+io/lizbank/transactionapi/utils/Util.class
+io/lizbank/transactionapi/models/FindTransactionResponse.class
+io/lizbank/transactionapi/mapper/TransactionMapper.class
+io/lizbank/transactionapi/utils/Constants.class
+io/lizbank/transactionapi/mapper/TransactionMapperImpl.class
+io/lizbank/transactionapi/api/TransactionApi.class

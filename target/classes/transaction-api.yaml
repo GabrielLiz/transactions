@@ -1,0 +1,154 @@
+swagger: "2.0"
+info:
+  description: "This is a sample server."
+  version: "1.0.0"
+  title: "Bank"
+  termsOfService: "http://swagger.io/terms/"
+  contact:
+    email: "gilberth89@gmail.com"
+  license:
+    name: "Apache 2.0"
+    url: "http://www.apache.org/licenses/LICENSE-2.0.html"
+host: "localhost:8080"
+basePath: "/"
+schemes:
+  - "https"
+  - "http"
+paths:
+  /transaction:
+    post:
+      summary: "Store transaction"
+      description: ""
+      operationId: "transaction"
+      consumes:
+        - "application/json"
+      produces:
+        - "application/json"
+      parameters:
+        - in: "body"
+          name: "body"
+          description: "This endpoint will receive the transaction information and store it into the system"
+          required: true
+          schema:
+            $ref: "#/definitions/transaction"
+      responses:
+        "200":
+          description: "Invalid input"
+  /searchTrByIban:
+    post:
+      summary: "search transactions"
+      description: ""
+      operationId: "searchTransactions"
+      consumes:
+        - "application/json"
+      produces:
+        - "application/json"
+      parameters:
+        - in: "body"
+          name: "body"
+          description: "searches for transactions"
+          required: true
+          schema:
+            $ref: "#/definitions/filters"
+      responses:
+        '201':
+          description: document created
+          schema:
+            $ref: '#/definitions/findTransactionResponse'
+  /transactionStatus:
+    post:
+      summary: "will return the status and additional information for a specific transaction"
+      description: ""
+      operationId: "transactionStatus"
+      consumes:
+        - "application/json"
+      produces:
+        - "application/json"
+      parameters:
+        - in: "body"
+          name: "body"
+          description: "return the status and additional information for a specific transaction"
+          required: true
+          schema:
+            $ref: "#/definitions/transactionStatus"
+      responses:
+        '201':
+          description: document created
+          schema:
+            $ref: '#/definitions/transactionStatusResponse'
+
+definitions:
+  transaction:
+    type: object
+    properties:
+      reference:
+        description: The transaction unique reference number in our system
+        type: integer
+      iban:
+        description: The IBAN number of the account where the transaction has happened.
+        type: string
+      transaction_date:
+        description: Date when the transaction took place
+        type: string
+      amount:
+        description: If positive the transaction is a credit (add money) to the account
+        type: number
+      fee:
+        description: Fee that will be deducted from the amount
+        type: number
+      description:
+        description: The description of the transaction
+        type: string
+  transactionStatus:
+    type: object
+    properties:
+      reference:
+        description: The transaction reference number
+        type: integer
+        example: 12345
+      channel:
+        description: The type of the channel that is asking for the status.
+        type: string
+        example: CLIENT
+  transactionStatusResponse:
+    type: object
+    properties:
+      reference:
+        description: The transaction reference number
+        type: integer
+        example: 12345A
+      status:
+        description: The status of the transaction
+        type: string
+        example: PENDING
+      amount:
+        description: the amount of the transaction.
+        type: number
+        example: 193.38
+      fee:
+        description: The fee applied to the transaction.
+        type: number
+        example: 3.18
+  findTransactionResponse:
+    type: object
+    properties:
+      operations:
+        type: array
+        items:
+          $ref: '#/definitions/transaction'
+  filters:
+    type: object
+    properties:
+      iban:
+        description: IBAN
+        type: string
+        example: ES9820385778983000760236
+      sortByAmount:
+        description: Sort by amount (ascending/descending)
+        type: string
+        example: ASC/DESC
+
+
+externalDocs:
+  description: "Find out more about Swagger"
+  url: "http://swagger.io"

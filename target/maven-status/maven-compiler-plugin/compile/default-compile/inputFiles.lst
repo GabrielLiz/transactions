@@ -1,0 +1,16 @@
+/home/gabriel/Desktop/transactions/Transactions/src/main/java/io/lizbank/transactionapi/repository/TransactionRepository.java
+/home/gabriel/Desktop/transactions/Transactions/target/generated-sources/src/main/java/io/lizbank/transactionapi/api/SearchTrByIbanApi.java
+/home/gabriel/Desktop/transactions/Transactions/src/main/java/io/lizbank/transactionapi/utils/Constants.java
+/home/gabriel/Desktop/transactions/Transactions/target/generated-sources/src/main/java/io/lizbank/transactionapi/api/TransactionStatusApi.java
+/home/gabriel/Desktop/transactions/Transactions/src/main/java/io/lizbank/transactionapi/mapper/TransactionMapper.java
+/home/gabriel/Desktop/transactions/Transactions/target/generated-sources/src/main/java/io/lizbank/transactionapi/models/Transaction.java
+/home/gabriel/Desktop/transactions/Transactions/target/generated-sources/src/main/java/io/lizbank/transactionapi/models/Filters.java
+/home/gabriel/Desktop/transactions/Transactions/src/main/java/io/lizbank/transactionapi/entities/TransactionEntity.java
+/home/gabriel/Desktop/transactions/Transactions/src/main/java/io/lizbank/transactionapi/TransactionApiApplication.java
+/home/gabriel/Desktop/transactions/Transactions/target/generated-sources/src/main/java/io/lizbank/transactionapi/models/FindTransactionResponse.java
+/home/gabriel/Desktop/transactions/Transactions/src/main/java/io/lizbank/transactionapi/controller/TransactionController.java
+/home/gabriel/Desktop/transactions/Transactions/src/main/java/io/lizbank/transactionapi/transactionService/impl/TransactionServiceImpl.java
+/home/gabriel/Desktop/transactions/Transactions/target/generated-sources/src/main/java/io/lizbank/transactionapi/models/TransactionStatus.java
+/home/gabriel/Desktop/transactions/Transactions/target/generated-sources/src/main/java/io/lizbank/transactionapi/models/TransactionStatusResponse.java
+/home/gabriel/Desktop/transactions/Transactions/src/main/java/io/lizbank/transactionapi/utils/Util.java
+/home/gabriel/Desktop/transactions/Transactions/target/generated-sources/src/main/java/io/lizbank/transactionapi/api/TransactionApi.java
