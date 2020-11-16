@@ -1,3 +1,10 @@
+### execute
+
+You can tested in  my cluster Docker/kuber with this IP  138.197.229.234:8081/
+
+check the endpoints list.
+
+
 ### Build and run
 
  You can run it with intellij or Eclipse IDE like any Spring-boot app.
@@ -6,7 +13,7 @@ Or by console:
 
  Build:`mvn install` or `mvn clean install`
   
- Run: in the target folder `java -jar transaction-api-0.0.1-SNAPSHOT.jar`
+ Run: in the target folder `java -jar transaction-api-0.0.2-SNAPSHOT.jar`
 
 ### Notes
 
